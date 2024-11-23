@@ -5,7 +5,7 @@ import {
   listAnimalQuery,
   updateAnimalBody,
 } from "./model";
-import { Prisma, PrismaClient } from "@prisma/client";
+import { Prisma, PrismaClient } from "../../../prisma/generated/client";
 
 const db = new PrismaClient();
 
