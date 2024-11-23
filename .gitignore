@@ -44,3 +44,5 @@ package-lock.json
 .env
 
 dist
+
+prisma/generated

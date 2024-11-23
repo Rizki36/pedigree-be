@@ -3,11 +3,12 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:vercel": "bunx prisma migrate deploy && bun run build && bun scripts/transform-paths.ts",
+    "vercel-build": "prisma generate && prisma migrate deploy && bun run build && bun scripts/transform-paths.ts",
     "build": "bun build src/index.ts --target bun --outdir ./dist",
     "start": "NODE_ENV=production bun dist/index.js",
     "dev": "bun run --watch src/index.ts",
-    "db:migrate": "bunx prisma migrate dev"
+    "db:migrate": "bunx prisma migrate dev",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.1.1",
