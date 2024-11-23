@@ -3,6 +3,8 @@ import { t } from "elysia";
 export const listAnimalQuery = t.Object({
   id_eq: t.Optional(t.String()),
   limit: t.Optional(t.Number()),
+  search: t.Optional(t.String()),
+  gender_eq: t.Optional(t.String()),
 });
 
 export const updateAnimalBody = t.Object({

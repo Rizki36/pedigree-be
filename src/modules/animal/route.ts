@@ -72,6 +72,13 @@ export const animalRoute = new Elysia({ prefix: "/animal" })
 
       const where: Prisma.AnimalFindManyArgs["where"] = {};
       if (query.id_eq) where.id = query.id_eq;
+      if (query.search)
+        where.OR = [
+          { code: { contains: query.search } },
+          { name: { contains: query.search } },
+        ];
+      if (query.gender_eq === "MALE") where.gender = { equals: "MALE" };
+      if (query.gender_eq === "FEMALE") where.gender = { equals: "FEMALE" };
 
       const animals = await db.animal.findMany({ where, take: limit });
 
