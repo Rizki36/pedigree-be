@@ -3,8 +3,8 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:vercel": "prisma generate && prisma migrate deploy && bun run build && bun scripts/transform-paths.ts",
-    "build": "tailwindcss -i ./src/styles/globals.css -o ./public/globals.css",
+    "build:vercel": "prisma generate && prisma migrate deploy && bun scripts/transform-paths.ts",
+    "build": "bun build src/index.ts --target bun --outdir ./dist",
     "start": "NODE_ENV=production bun dist/index.js",
     "dev": "bun run --watch src/index.ts",
     "db:migrate": "bunx prisma migrate dev",
