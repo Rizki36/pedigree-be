@@ -22,6 +22,6 @@ export const createAnimalBody = t.Object({
   diedAt: t.Optional(t.Date()),
 });
 
-export const deleteAnimalQuery = t.Object({
-  id_eq: t.String(),
+export const deleteAnimalBody = t.Object({
+  id: t.String(),
 });

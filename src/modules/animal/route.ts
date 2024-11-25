@@ -1,7 +1,7 @@
 import Elysia, { t } from "elysia";
 import {
   createAnimalBody,
-  deleteAnimalQuery,
+  deleteAnimalBody,
   listAnimalQuery,
   updateAnimalBody,
 } from "./model";
@@ -50,10 +50,10 @@ export const animalRoute = new Elysia({ prefix: "/animal" })
   )
   .delete(
     "",
-    async ({ query }) => {
+    async ({ body }) => {
       const animal = await db.animal.delete({
         where: {
-          id: query.id_eq,
+          id: body.id,
         },
       });
 
@@ -62,7 +62,7 @@ export const animalRoute = new Elysia({ prefix: "/animal" })
       };
     },
     {
-      query: deleteAnimalQuery,
+      body: deleteAnimalBody,
     }
   )
   .get(
