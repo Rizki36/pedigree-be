@@ -20,6 +20,7 @@ export const createAnimalBody = t.Object({
   name: t.String(),
   dateOfBirth: t.Optional(t.Date()),
   diedAt: t.Optional(t.Date()),
+  animalTypeId: t.String(),
 });
 
 export const deleteAnimalBody = t.Object({
