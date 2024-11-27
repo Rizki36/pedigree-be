@@ -2,6 +2,7 @@ import swagger from "@elysiajs/swagger";
 import Elysia from "elysia";
 import { animalRoute } from "./modules/animal/route";
 import cors from "@elysiajs/cors";
+import { animalTypeRoute } from "./modules/animalType/route";
 
 const app = new Elysia()
   .use(cors())
@@ -13,7 +14,7 @@ const app = new Elysia()
   })
   .get("/", () => "Hello Elysia")
   .group("/v1", (app) => {
-    return app.use(animalRoute);
+    return app.use(animalRoute).use(animalTypeRoute);
   })
   .listen(3011);
 

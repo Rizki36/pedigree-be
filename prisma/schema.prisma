@@ -20,31 +20,30 @@ enum Gender {
 }
 
 model AnimalType {
-  id     String   @id @default(uuid())
-  code   String   @unique
+  code   String   @id
   name   String
   Animal Animal[]
 }
 
 model Animal {
-  id           String    @id @default(uuid())
-  code         String
-  name         String
-  gender       Gender?
-  fatherId     String?
-  motherId     String?
-  note         String?
-  dateOfBirth  DateTime?
-  diedAt       DateTime?
-  animalTypeId String
+  id             String    @id @default(uuid())
+  code           String
+  name           String
+  gender         Gender?
+  fatherId       String?
+  motherId       String?
+  note           String?
+  dateOfBirth    DateTime?
+  diedAt         DateTime?
+  animalTypeCode String
 
-  animalType AnimalType @relation(fields: [animalTypeId], references: [id])
+  animalType AnimalType @relation(fields: [animalTypeCode], references: [code])
 
   @@index([id])
   @@index([code])
   @@index([fatherId])
   @@index([motherId])
-  @@index([animalTypeId])
+  @@index([animalTypeCode])
 }
 
 model Achievement {
