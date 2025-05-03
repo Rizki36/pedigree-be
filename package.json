@@ -7,15 +7,24 @@
     "start": "NODE_ENV=production bun dist/index.js",
     "dev": "bun run --watch src/index.ts",
     "db:migrate": "bunx prisma migrate dev",
-    "postinstall": "prisma generate && prisma migrate deploy"
+    "postinstall": "prisma generate && prisma migrate deploy",
+    "format": "bunx biome format --write .",
+    "lint": "bunx biome lint .",
+    "lint:fix": "bunx biome lint . --fix"
   },
   "dependencies": {
-    "@elysiajs/cors": "^1.1.1",
-    "@elysiajs/swagger": "^1.1.5",
+    "@bogeychan/elysia-oauth2": "^0.1.0",
+    "@elysiajs/cookie": "^0.8.0",
+    "@elysiajs/cors": "^1.2.0",
+    "@elysiajs/jwt": "^1.2.0",
+    "@elysiajs/swagger": "^1.2.2",
     "@prisma/client": "5.22.0",
-    "elysia": "latest"
+    "arctic": "^3.6.0",
+    "elysia": "latest",
+    "elysia-oauth2": "^2.0.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "bun-types": "latest",
     "prisma": "^5.22.0"
   },

@@ -19,6 +19,20 @@ enum Gender {
   FEMALE
 }
 
+model User {
+  id                     String                   @id @default(uuid())
+  name                   String
+  email                  String                   @unique
+  googleId               String?                  @unique
+  profilePictureUrl       String?
+  createdAt              DateTime                 @default(now())
+  updatedAt              DateTime                 @updatedAt
+  animal                 Animal[]
+  animalCustomField      AnimalCustomField[]
+  achievement            Achievement[]
+  achievementCustomField AchievementCustomField[]
+}
+
 model AnimalType {
   code   String   @id
   name   String
@@ -36,19 +50,94 @@ model Animal {
   dateOfBirth    DateTime?
   diedAt         DateTime?
   animalTypeCode String
+  userId         String
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
 
-  animalType AnimalType @relation(fields: [animalTypeCode], references: [code])
+  animalCustomFieldValue AnimalCustomFieldValue[]
+  animalType             AnimalType               @relation(fields: [animalTypeCode], references: [code])
+  user                   User                     @relation(fields: [userId], references: [id])
 
   @@index([id])
   @@index([code])
   @@index([fatherId])
   @@index([motherId])
   @@index([animalTypeCode])
+  @@index([userId])
+}
+
+model AnimalCustomField {
+  id        String   @id @default(uuid())
+  name      String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user                   User                     @relation(fields: [userId], references: [id])
+  animalCustomFieldValue AnimalCustomFieldValue[]
+
+  @@index([id])
+  @@index([userId])
+}
+
+model AnimalCustomFieldValue {
+  id                  String   @id @default(uuid())
+  value               String
+  animalCustomFieldId String
+  animalId            String
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  animalCustomField AnimalCustomField @relation(fields: [animalCustomFieldId], references: [id])
+  animal            Animal            @relation(fields: [animalId], references: [id])
+
+  @@index([id])
+  @@index([animalCustomFieldId])
+  @@index([animalId])
 }
 
 model Achievement {
-  id       String  @id @default(uuid())
-  name     String
-  issuedBy String?
-  issuedAt String?
+  id                          String                        @id @default(uuid())
+  name                        String
+  issuedBy                    String?
+  issuedAt                    String?
+  note                        String?
+  createdAt                   DateTime                      @default(now())
+  updatedAt                   DateTime                      @updatedAt
+  userId                      String
+  user                        User                          @relation(fields: [userId], references: [id])
+  achievementCustomFieldValue AchievementCustomFieldValue[]
+
+  @@index([id])
+  @@index([userId])
+}
+
+model AchievementCustomField {
+  id        String   @id @default(uuid())
+  name      String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user                        User                          @relation(fields: [userId], references: [id])
+  achievementCustomFieldValue AchievementCustomFieldValue[]
+
+  @@index([id])
+  @@index([userId])
+}
+
+model AchievementCustomFieldValue {
+  id                       String   @id @default(uuid())
+  value                    String
+  achievementCustomFieldId String
+  achievementId            String
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+
+  achievementCustomField AchievementCustomField @relation(fields: [achievementCustomFieldId], references: [id])
+  achievement            Achievement            @relation(fields: [achievementId], references: [id])
+
+  @@index([id])
+  @@index([achievementCustomFieldId])
+  @@index([achievementId])
 }
