@@ -35,6 +35,9 @@ export const animalRoute = elysiaV1Middleware.group("/animal", (app) => {
 						...(!isUndefined(body.note) && {
 							note: body.note,
 						}),
+						...(!isUndefined(body.gender) && {
+							gender: body.gender,
+						}),
 					},
 					where: {
 						id: body.id,
@@ -60,6 +63,7 @@ export const animalRoute = elysiaV1Middleware.group("/animal", (app) => {
 					data: {
 						code: body.code,
 						name: body.name,
+						gender: body.gender,
 						animalType: {
 							connect: {
 								code: body.animalTypeCode,

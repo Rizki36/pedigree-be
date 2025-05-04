@@ -4,6 +4,7 @@ import { animalRoute } from "./modules/animal/route";
 import cors from "@elysiajs/cors";
 import { animalTypeRoute } from "./modules/animalType/route";
 import { authRoute } from "./modules/auth/route";
+import { achievementRoute } from "./modules/achievement/route";
 
 const app = new Elysia()
 	.use(cors())
@@ -14,7 +15,11 @@ const app = new Elysia()
 	})
 	.get("/", () => "Hello Elysia")
 	.group("/v1", (app) => {
-		return app.use(authRoute).use(animalRoute).use(animalTypeRoute);
+		return app
+			.use(authRoute)
+			.use(animalRoute)
+			.use(animalTypeRoute)
+			.use(achievementRoute);
 	})
 	.listen(3011);
 
