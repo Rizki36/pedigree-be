@@ -5,6 +5,7 @@ import cors from "@elysiajs/cors";
 import { animalTypeRoute } from "./modules/animalType/route";
 import { authRoute } from "./modules/auth/route";
 import { achievementRoute } from "./modules/achievement/route";
+import { pedigreeRoute } from "./modules/pedigree/route";
 
 const app = new Elysia()
 	.use(cors())
@@ -19,7 +20,8 @@ const app = new Elysia()
 			.use(authRoute)
 			.use(animalRoute)
 			.use(animalTypeRoute)
-			.use(achievementRoute);
+			.use(achievementRoute)
+			.use(pedigreeRoute);
 	})
 	.listen(3011);
 
