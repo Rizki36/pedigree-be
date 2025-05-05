@@ -56,6 +56,11 @@ export const achievementRoute = elysiaV1Middleware.group(
 									id: payload.id,
 								},
 							},
+							animal: {
+								connect: {
+									id: body.animalId,
+								},
+							},
 						},
 					});
 
@@ -88,6 +93,8 @@ export const achievementRoute = elysiaV1Middleware.group(
 				"/list",
 				async ({ query }) => {
 					const where: Prisma.AchievementFindManyArgs["where"] = {};
+
+					if (query.animal_id_eq) where.animalId = query.animal_id_eq;
 
 					const achievements = await db.achievement.findMany({ where });
 

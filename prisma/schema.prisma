@@ -54,6 +54,7 @@ model Animal {
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
 
+  achievement            Achievement[]
   animalCustomFieldValue AnimalCustomFieldValue[]
   animalType             AnimalType               @relation(fields: [animalTypeCode], references: [code])
   user                   User                     @relation(fields: [userId], references: [id])
@@ -104,6 +105,8 @@ model Achievement {
   note                        String?
   createdAt                   DateTime                      @default(now())
   updatedAt                   DateTime                      @updatedAt
+  animalId                    String
+  animal                      Animal                        @relation(fields: [animalId], references: [id])
   userId                      String
   user                        User                          @relation(fields: [userId], references: [id])
   achievementCustomFieldValue AchievementCustomFieldValue[]

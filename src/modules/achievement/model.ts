@@ -1,6 +1,8 @@
 import { t } from "elysia";
 
-export const listAchievementQuery = t.Object({});
+export const listAchievementQuery = t.Object({
+	animal_id_eq: t.Optional(t.String()),
+});
 
 export const updateAchievementBody = t.Object({
 	id: t.String(),
@@ -15,6 +17,7 @@ export const createAchievementBody = t.Object({
 	issuedBy: t.Optional(t.String()),
 	issuedAt: t.Optional(t.Date()),
 	note: t.Optional(t.Nullable(t.String())),
+	animalId: t.String(),
 });
 
 export const deleteAchievementBody = t.Object({
