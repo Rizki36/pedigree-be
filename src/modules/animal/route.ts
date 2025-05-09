@@ -71,11 +71,7 @@ export const animalRoute = elysiaV1Middleware.group("/animal", (app) => {
 						code: body.code,
 						name: body.name,
 						gender: body.gender,
-						animalType: {
-							connect: {
-								code: body.animalTypeCode,
-							},
-						},
+						animalTypeCode: body.animalTypeCode,
 						user: {
 							connect: {
 								id: payload.id,

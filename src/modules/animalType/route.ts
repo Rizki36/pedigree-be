@@ -1,18 +1,21 @@
 import Elysia from "elysia";
+import { AnimalType } from "../../../prisma/generated/client";
 import { listAnimalTypeQuery } from "./model";
-import { type Prisma, PrismaClient } from "../../../prisma/generated/client";
-
-const db = new PrismaClient();
 
 export const animalTypeRoute = new Elysia({ prefix: "/animal-type" }).get(
 	"/list",
-	async ({ query }) => {
-		const where: Prisma.AnimalTypeFindManyArgs["where"] = {};
-		if (query.code_eq) where.code = query.code_eq;
-		const animalTypes = await db.animalType.findMany({ where });
+	async () => {
+		// fill with AnimalType enum
+		const docs: {
+			code: string;
+			name: string;
+		}[] = Object.values(AnimalType).map((animalType) => ({
+			code: animalType,
+			name: animalType,
+		}));
 
 		return {
-			docs: animalTypes,
+			docs,
 		};
 	},
 	{

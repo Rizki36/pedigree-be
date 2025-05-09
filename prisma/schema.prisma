@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
   output   = "./generated/client"
@@ -14,66 +8,51 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum Gender {
-  MALE
-  FEMALE
-}
-
 model User {
   id                     String                   @id @default(uuid())
   name                   String
   email                  String                   @unique
   googleId               String?                  @unique
-  profilePictureUrl      String?
   createdAt              DateTime                 @default(now())
   updatedAt              DateTime                 @updatedAt
-  animal                 Animal[]
-  animalCustomField      AnimalCustomField[]
+  profilePictureUrl      String?
   achievement            Achievement[]
   achievementCustomField AchievementCustomField[]
-}
-
-model AnimalType {
-  code   String   @id
-  name   String
-  Animal Animal[]
+  animal                 Animal[]
+  animalCustomField      AnimalCustomField[]
 }
 
 model Animal {
-  id             String    @id @default(uuid())
-  code           String
-  name           String
-  gender         Gender?
-  fatherId       String?
-  motherId       String?
-  note           String?
-  dateOfBirth    DateTime?
-  diedAt         DateTime?
-  animalTypeCode String
-  userId         String
-  createdAt      DateTime  @default(now())
-  updatedAt      DateTime  @updatedAt
-
+  id                     String                   @id @default(uuid())
+  code                   String
+  name                   String
+  gender                 Gender?
+  fatherId               String?
+  motherId               String?
+  note                   String?
+  dateOfBirth            DateTime?
+  diedAt                 DateTime?
+  createdAt              DateTime                 @default(now())
+  updatedAt              DateTime                 @updatedAt
+  userId                 String
   achievement            Achievement[]
-  animalCustomFieldValue AnimalCustomFieldValue[]
-  animalType             AnimalType               @relation(fields: [animalTypeCode], references: [code])
   user                   User                     @relation(fields: [userId], references: [id])
+  animalCustomFieldValue AnimalCustomFieldValue[]
+  animalTypeCode         AnimalType
 
   @@index([id])
   @@index([code])
   @@index([fatherId])
   @@index([motherId])
-  @@index([animalTypeCode])
   @@index([userId])
 }
 
 model AnimalCustomField {
-  id        String   @id @default(uuid())
-  name      String
-  userId    String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
+  id                     String                   @id @default(uuid())
+  name                   String
+  userId                 String
+  createdAt              DateTime                 @default(now())
+  updatedAt              DateTime                 @updatedAt
   user                   User                     @relation(fields: [userId], references: [id])
   animalCustomFieldValue AnimalCustomFieldValue[]
 
@@ -82,15 +61,14 @@ model AnimalCustomField {
 }
 
 model AnimalCustomFieldValue {
-  id                  String   @id @default(uuid())
+  id                  String            @id @default(uuid())
   value               String
   animalCustomFieldId String
   animalId            String
-  createdAt           DateTime @default(now())
-  updatedAt           DateTime @updatedAt
-
-  animalCustomField AnimalCustomField @relation(fields: [animalCustomFieldId], references: [id])
-  animal            Animal            @relation(fields: [animalId], references: [id])
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+  animalCustomField   AnimalCustomField @relation(fields: [animalCustomFieldId], references: [id])
+  animal              Animal            @relation(fields: [animalId], references: [id])
 
   @@index([id])
   @@index([animalCustomFieldId])
@@ -101,13 +79,13 @@ model Achievement {
   id                          String                        @id @default(uuid())
   name                        String
   issuedBy                    String?
-  issuedAt                    DateTime?
-  note                        String?
   createdAt                   DateTime                      @default(now())
+  note                        String?
   updatedAt                   DateTime                      @updatedAt
+  userId                      String
+  issuedAt                    DateTime?
   animalId                    String
   animal                      Animal                        @relation(fields: [animalId], references: [id])
-  userId                      String
   user                        User                          @relation(fields: [userId], references: [id])
   achievementCustomFieldValue AchievementCustomFieldValue[]
 
@@ -116,12 +94,11 @@ model Achievement {
 }
 
 model AchievementCustomField {
-  id        String   @id @default(uuid())
-  name      String
-  userId    String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
+  id                          String                        @id @default(uuid())
+  name                        String
+  userId                      String
+  createdAt                   DateTime                      @default(now())
+  updatedAt                   DateTime                      @updatedAt
   user                        User                          @relation(fields: [userId], references: [id])
   achievementCustomFieldValue AchievementCustomFieldValue[]
 
@@ -130,17 +107,30 @@ model AchievementCustomField {
 }
 
 model AchievementCustomFieldValue {
-  id                       String   @id @default(uuid())
+  id                       String                 @id @default(uuid())
   value                    String
   achievementCustomFieldId String
   achievementId            String
-  createdAt                DateTime @default(now())
-  updatedAt                DateTime @updatedAt
-
-  achievementCustomField AchievementCustomField @relation(fields: [achievementCustomFieldId], references: [id])
-  achievement            Achievement            @relation(fields: [achievementId], references: [id])
+  createdAt                DateTime               @default(now())
+  updatedAt                DateTime               @updatedAt
+  achievementCustomField   AchievementCustomField @relation(fields: [achievementCustomFieldId], references: [id])
+  achievement              Achievement            @relation(fields: [achievementId], references: [id])
 
   @@index([id])
   @@index([achievementCustomFieldId])
   @@index([achievementId])
+}
+
+enum Gender {
+  MALE
+  FEMALE
+}
+
+enum AnimalType {
+  DOG
+  CAT
+  BIRD
+  FISH
+  REPTILE
+  OTHER
 }
