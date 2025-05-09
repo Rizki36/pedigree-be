@@ -2,12 +2,15 @@ import { t } from "elysia";
 import { Gender } from "../../../prisma/generated/client";
 
 export const listAnimalQuery = t.Object({
+	limit: t.Optional(t.Numeric()),
+	search: t.Optional(t.String()),
 	id_eq: t.Optional(t.String()),
 	id_ne: t.Optional(t.String()),
-	limit: t.Optional(t.Number()),
-	search: t.Optional(t.String()),
-	gender_eq: t.Optional(t.String()),
 	animal_type_code_eq: t.Optional(t.String()),
+	gender_eq: t.Optional(
+		t.Union([t.Literal("MALE"), t.Literal("FEMALE"), t.Literal("OTHER")]),
+	),
+	status_eq: t.Optional(t.Union([t.Literal("ALIVE"), t.Literal("DEAD")])),
 });
 
 export const updateAnimalBody = t.Object({
