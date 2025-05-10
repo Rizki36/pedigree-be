@@ -3,7 +3,7 @@ import jwt from "@elysiajs/jwt";
 import Elysia, { t } from "elysia";
 import { oauth2 } from "elysia-oauth2";
 
-export const elysia = new Elysia();
+export const elysia = new Elysia({ name: "middleware" });
 
 const jwtBodySchema = t.Object({
 	id: t.String(),
