@@ -6,7 +6,8 @@ import { treeQuery } from "./model";
 type Node = Animal & {
 	hasNextNodes: boolean;
 	nodes: [Node | null, Node | null];
-	isCircular?: boolean; // New property to mark circular dependencies
+	isCircular: boolean; // property to mark circular dependencies
+	isSameParentGender: boolean; // property to mark if both parents are of the same gender
 };
 
 const db = new PrismaClient();
@@ -39,6 +40,7 @@ async function getAnimalTree(
 			hasNextNodes: false, // Don't show "has more" indicator for circular refs
 			nodes: [null, null],
 			isCircular: true,
+			isSameParentGender: false,
 		};
 	}
 
@@ -52,11 +54,34 @@ async function getAnimalTree(
 			: Promise.resolve(null),
 	]);
 
+	// Check if both parents exist and have the same gender
+	let isSameParentGender = false;
+
+	if (animal.fatherId && animal.motherId) {
+		// Fetch both parents to check their gender
+		const [father, mother] = await Promise.all([
+			db.animal.findUnique({
+				where: { id: animal.fatherId },
+				select: { gender: true },
+			}),
+			db.animal.findUnique({
+				where: { id: animal.motherId },
+				select: { gender: true },
+			}),
+		]);
+
+		// If both parents exist and have the same gender, mark it
+		if (father && mother && father.gender === mother.gender) {
+			isSameParentGender = true;
+		}
+	}
+
 	return {
 		...animal,
 		hasNextNodes: !!animal.motherId || !!animal.fatherId,
 		nodes: [fatherNode, motherNode],
 		isCircular: false,
+		isSameParentGender,
 	};
 }
 
