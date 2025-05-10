@@ -26,6 +26,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
+		"@faker-js/faker": "^9.7.0",
 		"bun-types": "latest",
 		"prisma": "^5.22.0"
 	},
