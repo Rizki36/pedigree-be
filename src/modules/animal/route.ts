@@ -113,8 +113,8 @@ export const animalRoute = elysiaV1Middleware.group("/animal", (app) => {
 				const where: Prisma.AnimalFindManyArgs["where"] = {};
 				if (query.search)
 					where.OR = [
-						{ code: { contains: query.search } },
-						{ name: { contains: query.search } },
+						{ code: { contains: query.search, mode: "insensitive" } },
+						{ name: { contains: query.search, mode: "insensitive" } },
 					];
 				if (query.id_eq) where.id = query.id_eq;
 				if (query.id_ne) where.id = { not: query.id_ne };
