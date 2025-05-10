@@ -109,6 +109,10 @@ export const animalRoute = elysiaV1Middleware.group("/animal", (app) => {
 			"/list",
 			async ({ query }) => {
 				const limit = query.limit ?? 20;
+				const skip = query.skip ?? 0;
+
+				if (skip > 0 && query.cursor)
+					throw new Error("Cannot use cursor and skip at the same time");
 
 				const where: Prisma.AnimalFindManyArgs["where"] = {};
 				if (query.search)
@@ -130,11 +134,11 @@ export const animalRoute = elysiaV1Middleware.group("/animal", (app) => {
 				if (query.status_eq === "ALIVE") where.diedAt = null;
 				if (query.status_eq === "DEAD") where.diedAt = { not: null };
 
-				// Cursor-based pagination
+				// Cursor-based pagination with limit+1 to check if more data exists
 				const paginationParams: Prisma.AnimalFindManyArgs = {
 					where,
-					take: limit,
-					orderBy: { createdAt: "desc" }, // Consistent ordering is required for cursor pagination
+					take: limit + 1, // Take one extra item to check if there are more
+					orderBy: { createdAt: "desc" },
 				};
 
 				// Add cursor if provided
@@ -143,9 +147,17 @@ export const animalRoute = elysiaV1Middleware.group("/animal", (app) => {
 					paginationParams.cursor = {
 						id: query.cursor,
 					};
+				} else {
+					paginationParams.skip = skip; // Use skip if no cursor
 				}
 
 				const animals = await db.animal.findMany(paginationParams);
+
+				// Check if we got more items than the requested limit
+				const hasMore = animals.length > limit;
+
+				// Remove the extra item if it exists
+				if (hasMore) animals.pop();
 
 				// Get the id of the last item for next cursor
 				const nextCursor =
@@ -155,7 +167,7 @@ export const animalRoute = elysiaV1Middleware.group("/animal", (app) => {
 					docs: animals,
 					limit,
 					nextCursor,
-					hasMore: animals.length === limit,
+					hasMore,
 				};
 			},
 			{
