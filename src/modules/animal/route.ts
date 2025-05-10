@@ -130,11 +130,32 @@ export const animalRoute = elysiaV1Middleware.group("/animal", (app) => {
 				if (query.status_eq === "ALIVE") where.diedAt = null;
 				if (query.status_eq === "DEAD") where.diedAt = { not: null };
 
-				const animals = await db.animal.findMany({ where, take: limit });
+				// Cursor-based pagination
+				const paginationParams: Prisma.AnimalFindManyArgs = {
+					where,
+					take: limit,
+					orderBy: { createdAt: "desc" }, // Consistent ordering is required for cursor pagination
+				};
+
+				// Add cursor if provided
+				if (query.cursor) {
+					paginationParams.skip = 1; // Skip the cursor
+					paginationParams.cursor = {
+						id: query.cursor,
+					};
+				}
+
+				const animals = await db.animal.findMany(paginationParams);
+
+				// Get the id of the last item for next cursor
+				const nextCursor =
+					animals.length > 0 ? animals[animals.length - 1].id : null;
 
 				return {
 					docs: animals,
 					limit,
+					nextCursor,
+					hasMore: animals.length === limit,
 				};
 			},
 			{

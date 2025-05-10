@@ -11,6 +11,7 @@ export const listAnimalQuery = t.Object({
 		t.Union([t.Literal("MALE"), t.Literal("FEMALE"), t.Literal("OTHER")]),
 	),
 	status_eq: t.Optional(t.Union([t.Literal("ALIVE"), t.Literal("DEAD")])),
+	cursor: t.Optional(t.String()),
 });
 
 export const updateAnimalBody = t.Object({
