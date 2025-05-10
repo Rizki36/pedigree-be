@@ -111,6 +111,9 @@ async function generateRandomAnimals(count: number, userId: string) {
 				}
 			}
 
+			// add 1 second to the createdAt date to ensure uniqueness
+			const createdAt = new Date(Date.now() - i * 1000);
+
 			batch.push({
 				code,
 				name,
@@ -122,6 +125,8 @@ async function generateRandomAnimals(count: number, userId: string) {
 				diedAt,
 				animalTypeCode: animalType,
 				userId,
+				createdAt: createdAt,
+				updatedAt: createdAt,
 			});
 		}
 
