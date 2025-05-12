@@ -7,12 +7,32 @@ import { authRoute } from "./modules/auth/route";
 import { achievementRoute } from "./modules/achievement/route";
 import { pedigreeRoute } from "./modules/pedigree/route";
 import { rateLimit } from "elysia-rate-limit";
+import logixlysia from "logixlysia";
 
 const app = new Elysia()
 	.use(
 		rateLimit({
 			duration: 60 * 1000, // 1 minute
 			max: 300, // max 300 requests per duration
+		}),
+	)
+	.use(
+		logixlysia({
+			config: {
+				showStartupMessage: true,
+				startupMessageFormat: "simple",
+				timestamp: {
+					translateTime: "yyyy-mm-dd HH:MM:ss",
+				},
+				ip: true,
+				logFilePath: `./logs/${new Date().toISOString().split("T")[0]}.log`, // per day
+				customLogFormat:
+					"🦊 {now} {level} {duration} {method} {pathname} {status} {message} {ip} {epoch}",
+				logFilter: {
+					level: ["ERROR", "WARNING"],
+					status: [500, 404],
+				},
+			},
 		}),
 	)
 	.use(cors())

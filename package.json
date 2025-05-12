@@ -23,7 +23,8 @@
 		"arctic": "^3.6.1",
 		"elysia": "latest",
 		"elysia-oauth2": "^2.0.0",
-		"elysia-rate-limit": "^4.3.0"
+		"elysia-rate-limit": "^4.3.0",
+		"logixlysia": "^4.2.7"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
