@@ -15,7 +15,9 @@ export const achievementRoute = elysia.group("/achievement", (app) => {
 	return app
 		.patch(
 			"",
-			async ({ body }) => {
+			async ({ body, store }) => {
+				const userId = store.user?.id!;
+
 				const achievement = await db.achievement.update({
 					data: {
 						...(!isUndefined(body.name) && { name: body.name }),
@@ -25,6 +27,7 @@ export const achievementRoute = elysia.group("/achievement", (app) => {
 					},
 					where: {
 						id: body.id,
+						userId,
 					},
 				});
 
@@ -39,10 +42,8 @@ export const achievementRoute = elysia.group("/achievement", (app) => {
 		)
 		.post(
 			"",
-			async ({ body, jwt, cookie }) => {
-				// Verify token from cookie
-				const payload = await jwt.verify(cookie.authToken.value);
-				if (!payload) return { authenticated: false };
+			async ({ body, store }) => {
+				const userId = store.user?.id!;
 
 				const achievement = await db.achievement.create({
 					data: {
@@ -52,7 +53,7 @@ export const achievementRoute = elysia.group("/achievement", (app) => {
 						note: body.note,
 						user: {
 							connect: {
-								id: payload.id,
+								id: userId,
 							},
 						},
 						animal: {
@@ -74,10 +75,13 @@ export const achievementRoute = elysia.group("/achievement", (app) => {
 		)
 		.delete(
 			"",
-			async ({ body }) => {
+			async ({ body, store }) => {
+				const userId = store.user?.id!;
+
 				const achievement = await db.achievement.delete({
 					where: {
 						id: body.id,
+						userId,
 					},
 				});
 
@@ -92,8 +96,12 @@ export const achievementRoute = elysia.group("/achievement", (app) => {
 		)
 		.get(
 			"/list",
-			async ({ query }) => {
-				const where: Prisma.AchievementFindManyArgs["where"] = {};
+			async ({ query, store }) => {
+				const userId = store.user?.id!;
+
+				const where: Prisma.AchievementFindManyArgs["where"] = {
+					userId,
+				};
 
 				if (query.animal_id_eq) where.animalId = query.animal_id_eq;
 
