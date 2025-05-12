@@ -9,14 +9,21 @@ import { pedigreeRoute } from "./modules/pedigree/route";
 import { rateLimit } from "elysia-rate-limit";
 
 const app = new Elysia()
-	.use(rateLimit())
+	.use(
+		rateLimit({
+			duration: 60 * 1000, // 1 minute
+			max: 300, // max 300 requests per duration
+		}),
+	)
 	.use(cors())
 	.use(swagger())
 	.onError(({ error, code }) => {
 		if (code === "NOT_FOUND") return;
 		console.error(error);
 	})
-	.get("/", () => "Hello Elysia")
+	.get("/", () => {
+		return "Hello Elysia";
+	})
 	.group("/v1", (app) => {
 		return app
 			.use(authRoute)
