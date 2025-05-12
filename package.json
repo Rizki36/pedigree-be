@@ -22,7 +22,8 @@
 		"@prisma/client": "5.22.0",
 		"arctic": "^3.6.1",
 		"elysia": "latest",
-		"elysia-oauth2": "^2.0.0"
+		"elysia-oauth2": "^2.0.0",
+		"elysia-rate-limit": "^4.3.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",

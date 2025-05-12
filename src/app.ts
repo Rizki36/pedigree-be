@@ -6,8 +6,10 @@ import { animalTypeRoute } from "./modules/animalType/route";
 import { authRoute } from "./modules/auth/route";
 import { achievementRoute } from "./modules/achievement/route";
 import { pedigreeRoute } from "./modules/pedigree/route";
+import { rateLimit } from "elysia-rate-limit";
 
 const app = new Elysia()
+	.use(rateLimit())
 	.use(cors())
 	.use(swagger())
 	.onError(({ error, code }) => {
