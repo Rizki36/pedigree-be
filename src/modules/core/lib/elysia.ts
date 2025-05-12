@@ -3,15 +3,16 @@ import jwt from "@elysiajs/jwt";
 import Elysia, { t } from "elysia";
 import { oauth2 } from "elysia-oauth2";
 
-export const elysia = new Elysia({ name: "middleware" });
-
 const jwtBodySchema = t.Object({
 	id: t.String(),
 	email: t.String(),
 	exp: t.Number(),
 });
 
-export const elysiaV1Middleware = elysia
+export const elysia = new Elysia({ name: "elysia-v1" })
+	.state({
+		user: null as null | { id: string; email: string },
+	})
 	.use(cookie())
 	.use(
 		jwt<"jwt", typeof jwtBodySchema>({
@@ -27,4 +28,31 @@ export const elysiaV1Middleware = elysia
 				process.env.GOOGLE_REDIRECT_URI!,
 			],
 		}),
-	);
+	)
+	.macro({
+		isSignIn(enabled: boolean) {
+			if (!enabled) return;
+
+			return {
+				async beforeHandle({ status, jwt, cookie: { authToken }, store }) {
+					if (!authToken.value) {
+						return status(401, {
+							authenticated: false,
+						});
+					}
+
+					const payload = await jwt.verify(authToken.value);
+					if (!payload) {
+						return status(401, {
+							authenticated: false,
+						});
+					}
+
+					store.user = {
+						id: payload.id,
+						email: payload.email,
+					};
+				},
+			};
+		},
+	});

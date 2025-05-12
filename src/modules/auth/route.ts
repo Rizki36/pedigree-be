@@ -1,10 +1,10 @@
 import { t } from "elysia";
 import { PrismaClient } from "../../../prisma/generated/client";
-import { elysiaV1Middleware } from "../core/lib/elysia";
+import { elysia } from "../core/lib/elysia";
 
 const prisma = new PrismaClient();
 
-export const authRoute = elysiaV1Middleware.group("/auth", (app) => {
+export const authRoute = elysia.group("/auth", (app) => {
 	return app
 		.get("/google", async ({ oauth2, redirect }) => {
 			const url = oauth2.createURL("Google", ["email", "profile"]);
@@ -102,7 +102,12 @@ export const authRoute = elysiaV1Middleware.group("/auth", (app) => {
 			// Return user info
 			const user = await prisma.user.findUnique({
 				where: { id: payload.id },
-				select: { id: true, email: true, name: true, profilePictureUrl: true },
+				select: {
+					id: true,
+					email: true,
+					name: true,
+					profilePictureUrl: true,
+				},
 			});
 
 			return { authenticated: true, user };

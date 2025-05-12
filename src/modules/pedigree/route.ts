@@ -1,6 +1,6 @@
 import type { Animal } from "../../../prisma/generated/client";
 import { PrismaClient } from "../../../prisma/generated/client";
-import { elysiaV1Middleware } from "../core/lib/elysia";
+import { elysia } from "../core/lib/elysia";
 import { treeQuery } from "./model";
 
 type Node = Animal & {
@@ -16,6 +16,7 @@ const db = new PrismaClient();
 async function getAnimalTree(
 	id: string,
 	level: number,
+	userId: string,
 	ancestors: Set<string> = new Set(), // Track ancestors to detect circular references
 ): Promise<Node | null> {
 	if (level <= 0) return null;
@@ -47,10 +48,10 @@ async function getAnimalTree(
 	// Continue with the normal tree traversal
 	const [fatherNode, motherNode] = await Promise.all([
 		animal.fatherId
-			? getAnimalTree(animal.fatherId, level - 1, currentPath)
+			? getAnimalTree(animal.fatherId, level - 1, userId, currentPath)
 			: Promise.resolve(null),
 		animal.motherId
-			? getAnimalTree(animal.motherId, level - 1, currentPath)
+			? getAnimalTree(animal.motherId, level - 1, userId, currentPath)
 			: Promise.resolve(null),
 	]);
 
@@ -61,11 +62,11 @@ async function getAnimalTree(
 		// Fetch both parents to check their gender
 		const [father, mother] = await Promise.all([
 			db.animal.findUnique({
-				where: { id: animal.fatherId },
+				where: { id: animal.fatherId, userId },
 				select: { gender: true },
 			}),
 			db.animal.findUnique({
-				where: { id: animal.motherId },
+				where: { id: animal.motherId, userId },
 				select: { gender: true },
 			}),
 		]);
@@ -85,16 +86,19 @@ async function getAnimalTree(
 	};
 }
 
-export const pedigreeRoute = elysiaV1Middleware.group("/pedigree", (app) => {
+export const pedigreeRoute = elysia.group("/pedigree", (app) => {
 	return app.get(
 		"/tree",
-		async ({ query }) => {
+		async ({ query, store }) => {
 			const { level, animal_id_eq, visited_ids } = query;
+
+			const userId = store.user?.id!;
 
 			const nodes: Node[] = [];
 			const animalTree = await getAnimalTree(
 				animal_id_eq,
 				level,
+				userId,
 				new Set(visited_ids || []),
 			);
 			if (animalTree) nodes.push(animalTree);
@@ -103,6 +107,7 @@ export const pedigreeRoute = elysiaV1Middleware.group("/pedigree", (app) => {
 		},
 		{
 			query: treeQuery,
+			isSignIn: true,
 		},
 	);
 });
