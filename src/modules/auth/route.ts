@@ -11,7 +11,6 @@ export const authRoute = elysia.group("/auth", (app) => {
 			.post(
 				"/test-login",
 				async ({ body, jwt, cookie, status }) => {
-					console.log(Bun.env.NODE_ENV);
 					// disable this in production
 					if (process.env.NODE_ENV !== "development") {
 						return status(403, { error: "Forbidden" });
