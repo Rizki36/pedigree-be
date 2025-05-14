@@ -21,13 +21,28 @@ export const elysia = new Elysia({ name: "elysia-v1" })
 		}),
 	)
 	.use(
-		oauth2({
-			Google: [
-				process.env.GOOGLE_CLIENT_ID!,
-				process.env.GOOGLE_CLIENT_SECRET!,
-				process.env.GOOGLE_REDIRECT_URI!,
-			],
-		}),
+		oauth2(
+			{
+				Google: [
+					process.env.GOOGLE_CLIENT_ID!,
+					process.env.GOOGLE_CLIENT_SECRET!,
+					process.env.GOOGLE_REDIRECT_URI!,
+				],
+			},
+			process.env.NODE_ENV === "development"
+				? {}
+				: {
+						cookie: {
+							// defaults
+							secure: true,
+							sameSite: "None",
+							path: "/",
+							httpOnly: true,
+							maxAge: 60 * 30, // 30 min
+							domain: process.env.DOMAIN,
+						},
+					},
+		),
 	)
 	.macro({
 		isSignIn(enabled: boolean) {
