@@ -112,8 +112,9 @@ export const authRoute = elysia.group("/auth", (app) => {
 
 						// Set cookie and redirect to frontend
 						cookie.authToken.value = token;
-						cookie.authToken.httpOnly = process.env.NODE_ENV === "production";
-						cookie.authToken.secure = process.env.NODE_ENV === "production";
+						// TODO: Uncomment these lines for production, temporarily disabled for testing
+						// cookie.authToken.httpOnly = process.env.NODE_ENV === "production";
+						// cookie.authToken.secure = process.env.NODE_ENV === "production";
 						cookie.authToken.maxAge = 60 * 60 * 24 * 7; // 7 days
 
 						return redirect(

@@ -35,7 +35,21 @@ const app = new Elysia()
 			},
 		}),
 	)
-	.use(cors())
+	.use(
+		cors({
+			origin:
+				process.env.NODE_ENV === "development"
+					? "*"
+					: [
+							"https://pedigree.devfitra.com",
+							"https://www.pedigree.devfitra.com",
+						], // Allow specific domains for production
+			methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
+			allowedHeaders: ["Content-Type", "Authorization"], // Restrict allowed headers
+			credentials: true, // Enable if you need cookies/auth to be included
+			maxAge: 86400, // Cache preflight requests (in seconds, e.g., 1 day)
+		}),
+	)
 	.use(swagger())
 	.onError(({ error, code }) => {
 		if (code === "NOT_FOUND") return;
