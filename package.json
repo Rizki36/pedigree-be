@@ -6,7 +6,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "bun build src/index.ts --target bun --outdir ./dist",
 		"start": "NODE_ENV=production bun dist/index.js",
-		"dev": "bun run --watch src/index.ts",
+		"dev": "bun run --watch src/dev.ts",
 		"db:migrate": "bunx prisma migrate dev",
 		"postinstall": "prisma generate",
 		"db:deploy": "prisma migrate deploy",

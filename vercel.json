@@ -1,10 +1,4 @@
 {
 	"$schema": "https://openapi.vercel.sh/vercel.json",
-	"bunVersion": "1.x",
-	"rewrites": [
-		{
-			"source": "/(.*)",
-			"destination": "/api/index.ts"
-		}
-	]
+	"bunVersion": "1.x"
 }
