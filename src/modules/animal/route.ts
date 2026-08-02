@@ -15,9 +15,10 @@ export const animalRoute = elysia.group("/animal", (app) => {
 	return app
 		.patch(
 			"",
-			async ({ body }) => {
+			async ({ body, store }) => {
 				return animalService.updateAnimal({
 					body,
+					userId: store.user?.id!,
 				});
 			},
 			{
@@ -27,13 +28,10 @@ export const animalRoute = elysia.group("/animal", (app) => {
 		)
 		.post(
 			"",
-			async ({ body, jwt, cookie, status }) => {
-				const payload = await jwt.verify(cookie.authToken.value);
-				if (!payload) return status(401);
-
+			async ({ body, store }) => {
 				return animalService.createAnimal({
 					body,
-					userId: payload.id,
+					userId: store.user?.id!,
 				});
 			},
 			{
@@ -43,9 +41,10 @@ export const animalRoute = elysia.group("/animal", (app) => {
 		)
 		.delete(
 			"",
-			async ({ body }) => {
+			async ({ body, store }) => {
 				return animalService.deleteAnimal({
 					body,
+					userId: store.user?.id!,
 				});
 			},
 			{
@@ -68,12 +67,9 @@ export const animalRoute = elysia.group("/animal", (app) => {
 		)
 		.get(
 			"/stat/require-to-add-parent",
-			async ({ cookie, jwt, status }) => {
-				const payload = await jwt.verify(cookie.authToken.value);
-				if (!payload) return status(401);
-
+			async ({ store }) => {
 				return animalService.getStatRequireToAddParent({
-					userId: payload.id,
+					userId: store.user?.id!,
 				});
 			},
 			{
@@ -82,12 +78,9 @@ export const animalRoute = elysia.group("/animal", (app) => {
 		)
 		.get(
 			"/stat/require-to-add-gender",
-			async ({ cookie, jwt, status }) => {
-				const payload = await jwt.verify(cookie.authToken.value);
-				if (!payload) return status(401);
-
+			async ({ store }) => {
 				return animalService.getStatRequireToAddGender({
-					userId: payload.id,
+					userId: store.user?.id!,
 				});
 			},
 			{
@@ -96,12 +89,9 @@ export const animalRoute = elysia.group("/animal", (app) => {
 		)
 		.get(
 			"/stat/require-to-add-dob",
-			async ({ cookie, jwt, status }) => {
-				const payload = await jwt.verify(cookie.authToken.value);
-				if (!payload) return status(401);
-
+			async ({ store }) => {
 				return animalService.getStatRequireToAddDOB({
-					userId: payload.id,
+					userId: store.user?.id!,
 				});
 			},
 			{
@@ -110,12 +100,9 @@ export const animalRoute = elysia.group("/animal", (app) => {
 		)
 		.get(
 			"/tree/status-distribution",
-			async ({ cookie, jwt, status }) => {
-				const payload = await jwt.verify(cookie.authToken.value);
-				if (!payload) return status(401);
-
+			async ({ store }) => {
 				return animalService.getTreeStatusDistribution({
-					userId: payload.id,
+					userId: store.user?.id!,
 				});
 			},
 			{

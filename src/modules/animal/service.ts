@@ -1,4 +1,7 @@
-import type { Prisma, PrismaClient } from "../../../prisma/generated/client/index.js";
+import type {
+	Prisma,
+	PrismaClient,
+} from "../../../prisma/generated/client/index.js";
 import type {
 	createAnimalBody,
 	deleteAnimalBody,
@@ -92,8 +95,9 @@ export class AnimalService {
 
 	async updateAnimal(args: {
 		body: typeof updateAnimalBody.static;
+		userId: string;
 	}) {
-		const { body } = args;
+		const { body, userId } = args;
 
 		const animal = await this.prisma.animal.update({
 			data: {
@@ -117,6 +121,7 @@ export class AnimalService {
 			},
 			where: {
 				id: body.id,
+				userId,
 			},
 		});
 
@@ -151,12 +156,14 @@ export class AnimalService {
 
 	async deleteAnimal(args: {
 		body: typeof deleteAnimalBody.static;
+		userId: string;
 	}) {
-		const { body } = args;
+		const { body, userId } = args;
 
 		const animal = await this.prisma.animal.delete({
 			where: {
 				id: body.id,
+				userId,
 			},
 		});
 

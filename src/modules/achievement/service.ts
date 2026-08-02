@@ -1,4 +1,7 @@
-import type { Prisma, PrismaClient } from "../../../prisma/generated/client/index.js";
+import type {
+	Prisma,
+	PrismaClient,
+} from "../../../prisma/generated/client/index.js";
 import type {
 	createAchievementBody,
 	deleteAchievementBody,
@@ -15,7 +18,7 @@ export class AchievementService {
 
 	async updateAchievement(args: {
 		body: typeof updateAchievementBody.static;
-		userId?: string;
+		userId: string;
 	}) {
 		const { body, userId } = args;
 
@@ -45,6 +48,16 @@ export class AchievementService {
 	}) {
 		const { body, userId } = args;
 
+		const animal = await this.prisma.animal.findFirst({
+			where: {
+				id: body.animalId,
+				userId,
+			},
+		});
+		if (!animal) {
+			throw new Error("Animal not found");
+		}
+
 		const achievement = await this.prisma.achievement.create({
 			data: {
 				name: body.name,
@@ -58,7 +71,7 @@ export class AchievementService {
 				},
 				animal: {
 					connect: {
-						id: body.animalId,
+						id: animal.id,
 					},
 				},
 			},
