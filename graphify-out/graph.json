@@ -4,244 +4,81 @@
   "graph": {},
   "nodes": [
     {
-      "label": "app.ts",
-      "file_type": "code",
-      "source_file": "src/app.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app",
-      "community": 1,
-      "norm_label": "app.ts"
-    },
-    {
-      "label": "app",
-      "file_type": "code",
-      "source_file": "src/app.ts",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_app_app",
-      "community": 1,
-      "norm_label": "app"
-    },
-    {
-      "label": "src/index.ts",
-      "file_type": "code",
-      "source_file": "src/index.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_index",
-      "community": 1,
-      "norm_label": "src/index.ts"
-    },
-    {
-      "label": "achievement/model.ts",
-      "file_type": "code",
-      "source_file": "src/modules/achievement/model.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_modules_achievement_model",
-      "community": 0,
-      "norm_label": "achievement/model.ts"
-    },
-    {
-      "label": "listAchievementQuery",
-      "file_type": "code",
-      "source_file": "src/modules/achievement/model.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "src_modules_achievement_model_listachievementquery",
-      "community": 0,
-      "norm_label": "listachievementquery"
-    },
-    {
-      "label": "updateAchievementBody",
-      "file_type": "code",
-      "source_file": "src/modules/achievement/model.ts",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "src_modules_achievement_model_updateachievementbody",
-      "community": 0,
-      "norm_label": "updateachievementbody"
-    },
-    {
-      "label": "createAchievementBody",
-      "file_type": "code",
-      "source_file": "src/modules/achievement/model.ts",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "src_modules_achievement_model_createachievementbody",
-      "community": 0,
-      "norm_label": "createachievementbody"
-    },
-    {
-      "label": "deleteAchievementBody",
-      "file_type": "code",
-      "source_file": "src/modules/achievement/model.ts",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "src_modules_achievement_model_deleteachievementbody",
-      "community": 0,
-      "norm_label": "deleteachievementbody"
-    },
-    {
-      "label": "achievement/route.ts",
-      "file_type": "code",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_modules_achievement_route",
-      "community": 0,
-      "norm_label": "achievement/route.ts"
-    },
-    {
-      "label": "prisma",
-      "file_type": "code",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "src_modules_achievement_route_prisma",
-      "community": 0,
-      "norm_label": "prisma"
-    },
-    {
-      "label": "achievementService",
-      "file_type": "code",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_modules_achievement_route_achievementservice",
-      "community": 0,
-      "norm_label": "achievementservice"
-    },
-    {
-      "label": "achievementRoute",
-      "file_type": "code",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "src_modules_achievement_route_achievementroute",
-      "community": 1,
-      "norm_label": "achievementroute"
-    },
-    {
       "label": "achievement/service.ts",
       "file_type": "code",
       "source_file": "src/modules/achievement/service.ts",
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_achievement_service",
-      "community": 0,
+      "community": 6,
+      "community_name": "Animal Routes",
       "norm_label": "achievement/service.ts"
     },
     {
       "label": "AchievementService",
       "file_type": "code",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L9",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_achievement_service_achievementservice",
-      "community": 0,
+      "community": 6,
+      "community_name": "Animal Routes",
       "norm_label": "achievementservice"
     },
     {
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L12",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "src_modules_achievement_service_achievementservice_constructor",
-      "community": 0,
+      "community": 6,
+      "community_name": "Animal Routes",
       "norm_label": ".constructor()"
     },
     {
       "label": ".updateAchievement()",
       "file_type": "code",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L16",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "src_modules_achievement_service_achievementservice_updateachievement",
-      "community": 0,
+      "community": 6,
+      "community_name": "Animal Routes",
       "norm_label": ".updateachievement()"
     },
     {
       "label": ".createAchievement()",
       "file_type": "code",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L42",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "src_modules_achievement_service_achievementservice_createachievement",
-      "community": 0,
+      "community": 6,
+      "community_name": "Animal Routes",
       "norm_label": ".createachievement()"
     },
     {
       "label": ".deleteAchievement()",
       "file_type": "code",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L72",
+      "source_location": "L85",
       "_origin": "ast",
       "id": "src_modules_achievement_service_achievementservice_deleteachievement",
-      "community": 0,
+      "community": 6,
+      "community_name": "Animal Routes",
       "norm_label": ".deleteachievement()"
     },
     {
       "label": ".getAchievementList()",
       "file_type": "code",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L90",
+      "source_location": "L103",
       "_origin": "ast",
       "id": "src_modules_achievement_service_achievementservice_getachievementlist",
-      "community": 0,
+      "community": 6,
+      "community_name": "Animal Routes",
       "norm_label": ".getachievementlist()"
-    },
-    {
-      "label": "animal/model.ts",
-      "file_type": "code",
-      "source_file": "src/modules/animal/model.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_modules_animal_model",
-      "community": 3,
-      "norm_label": "animal/model.ts"
-    },
-    {
-      "label": "listAnimalQuery",
-      "file_type": "code",
-      "source_file": "src/modules/animal/model.ts",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "src_modules_animal_model_listanimalquery",
-      "community": 7,
-      "norm_label": "listanimalquery"
-    },
-    {
-      "label": "updateAnimalBody",
-      "file_type": "code",
-      "source_file": "src/modules/animal/model.ts",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "src_modules_animal_model_updateanimalbody",
-      "community": 8,
-      "norm_label": "updateanimalbody"
-    },
-    {
-      "label": "createAnimalBody",
-      "file_type": "code",
-      "source_file": "src/modules/animal/model.ts",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "src_modules_animal_model_createanimalbody",
-      "community": 3,
-      "norm_label": "createanimalbody"
-    },
-    {
-      "label": "deleteAnimalBody",
-      "file_type": "code",
-      "source_file": "src/modules/animal/model.ts",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "src_modules_animal_model_deleteanimalbody",
-      "community": 3,
-      "norm_label": "deleteanimalbody"
     },
     {
       "label": "animal/route.ts",
@@ -250,7 +87,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_animal_route",
-      "community": 6,
+      "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": "animal/route.ts"
     },
     {
@@ -260,7 +98,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_animal_route_prisma",
-      "community": 6,
+      "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": "prisma"
     },
     {
@@ -270,7 +109,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_animal_route_animalservice",
-      "community": 6,
+      "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": "animalservice"
     },
     {
@@ -280,7 +120,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_modules_animal_route_animalroute",
-      "community": 1,
+      "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": "animalroute"
     },
     {
@@ -290,118 +131,317 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_animal_service",
-      "community": 3,
+      "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": "animal/service.ts"
     },
     {
       "label": "StatusDistributionItem",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L9",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_animal_service_statusdistributionitem",
-      "community": 3,
+      "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": "statusdistributionitem"
     },
     {
       "label": "AnimalService",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L15",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "src_modules_animal_service_animalservice",
       "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": "animalservice"
     },
     {
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L18",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "src_modules_animal_service_animalservice_constructor",
       "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": ".constructor()"
     },
     {
       "label": ".getAnimalList()",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L22",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "src_modules_animal_service_animalservice_getanimallist",
-      "community": 7,
+      "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": ".getanimallist()"
     },
     {
       "label": ".updateAnimal()",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L93",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "src_modules_animal_service_animalservice_updateanimal",
-      "community": 8,
+      "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": ".updateanimal()"
     },
     {
       "label": ".createAnimal()",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L128",
+      "source_location": "L133",
       "_origin": "ast",
       "id": "src_modules_animal_service_animalservice_createanimal",
-      "community": 3,
+      "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": ".createanimal()"
     },
     {
       "label": ".deleteAnimal()",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L152",
+      "source_location": "L157",
       "_origin": "ast",
       "id": "src_modules_animal_service_animalservice_deleteanimal",
-      "community": 3,
+      "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": ".deleteanimal()"
     },
     {
       "label": ".getStatRequireToAddParent()",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L168",
+      "source_location": "L175",
       "_origin": "ast",
       "id": "src_modules_animal_service_animalservice_getstatrequiretoaddparent",
       "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": ".getstatrequiretoaddparent()"
     },
     {
       "label": ".getStatRequireToAddGender()",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L195",
+      "source_location": "L202",
       "_origin": "ast",
       "id": "src_modules_animal_service_animalservice_getstatrequiretoaddgender",
       "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": ".getstatrequiretoaddgender()"
     },
     {
       "label": ".getStatRequireToAddDOB()",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L214",
+      "source_location": "L221",
       "_origin": "ast",
       "id": "src_modules_animal_service_animalservice_getstatrequiretoadddob",
       "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": ".getstatrequiretoadddob()"
     },
     {
       "label": ".getTreeStatusDistribution()",
       "file_type": "code",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L232",
+      "source_location": "L239",
       "_origin": "ast",
       "id": "src_modules_animal_service_animalservice_gettreestatusdistribution",
       "community": 5,
+      "community_name": "Animal Status Methods",
       "norm_label": ".gettreestatusdistribution()"
+    },
+    {
+      "label": "app.ts",
+      "file_type": "code",
+      "source_file": "src/app.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "app.ts",
+      "id": "src_app",
+      "community_name": "App & Route Wiring"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "src/app.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "app",
+      "id": "src_app_app",
+      "community_name": "App & Route Wiring"
+    },
+    {
+      "label": "src/index.ts",
+      "file_type": "code",
+      "source_file": "src/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "src/index.ts",
+      "id": "src_index",
+      "community_name": "App & Route Wiring"
+    },
+    {
+      "label": "achievement/model.ts",
+      "file_type": "code",
+      "source_file": "src/modules/achievement/model.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "achievement/model.ts",
+      "id": "src_modules_achievement_model",
+      "community_name": "Achievement Module"
+    },
+    {
+      "label": "listAchievementQuery",
+      "file_type": "code",
+      "source_file": "src/modules/achievement/model.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "listachievementquery",
+      "id": "src_modules_achievement_model_listachievementquery",
+      "community_name": "Achievement Module"
+    },
+    {
+      "label": "updateAchievementBody",
+      "file_type": "code",
+      "source_file": "src/modules/achievement/model.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "updateachievementbody",
+      "id": "src_modules_achievement_model_updateachievementbody",
+      "community_name": "Achievement Module"
+    },
+    {
+      "label": "createAchievementBody",
+      "file_type": "code",
+      "source_file": "src/modules/achievement/model.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "createachievementbody",
+      "id": "src_modules_achievement_model_createachievementbody",
+      "community_name": "Achievement Module"
+    },
+    {
+      "label": "deleteAchievementBody",
+      "file_type": "code",
+      "source_file": "src/modules/achievement/model.ts",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "deleteachievementbody",
+      "id": "src_modules_achievement_model_deleteachievementbody",
+      "community_name": "Achievement Module"
+    },
+    {
+      "label": "achievement/route.ts",
+      "file_type": "code",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "achievement/route.ts",
+      "id": "src_modules_achievement_route",
+      "community_name": "Achievement Module"
+    },
+    {
+      "label": "prisma",
+      "file_type": "code",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "prisma",
+      "id": "src_modules_achievement_route_prisma",
+      "community_name": "Achievement Module"
+    },
+    {
+      "label": "achievementService",
+      "file_type": "code",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "achievementservice",
+      "id": "src_modules_achievement_route_achievementservice",
+      "community_name": "Achievement Module"
+    },
+    {
+      "label": "achievementRoute",
+      "file_type": "code",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "achievementroute",
+      "id": "src_modules_achievement_route_achievementroute",
+      "community_name": "App & Route Wiring"
+    },
+    {
+      "label": "animal/model.ts",
+      "file_type": "code",
+      "source_file": "src/modules/animal/model.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "animal/model.ts",
+      "id": "src_modules_animal_model",
+      "community_name": "Animal Create/Delete"
+    },
+    {
+      "label": "listAnimalQuery",
+      "file_type": "code",
+      "source_file": "src/modules/animal/model.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "listanimalquery",
+      "id": "src_modules_animal_model_listanimalquery",
+      "community_name": "Animal Create/Delete"
+    },
+    {
+      "label": "updateAnimalBody",
+      "file_type": "code",
+      "source_file": "src/modules/animal/model.ts",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "updateanimalbody",
+      "id": "src_modules_animal_model_updateanimalbody",
+      "community_name": "Animal Create/Delete"
+    },
+    {
+      "label": "createAnimalBody",
+      "file_type": "code",
+      "source_file": "src/modules/animal/model.ts",
+      "source_location": "L31",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "createanimalbody",
+      "id": "src_modules_animal_model_createanimalbody",
+      "community_name": "Animal Create/Delete"
+    },
+    {
+      "label": "deleteAnimalBody",
+      "file_type": "code",
+      "source_file": "src/modules/animal/model.ts",
+      "source_location": "L40",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "deleteanimalbody",
+      "id": "src_modules_animal_model_deleteanimalbody",
+      "community_name": "Animal Create/Delete"
     },
     {
       "label": "animalType/model.ts",
@@ -409,9 +449,10 @@
       "source_file": "src/modules/animalType/model.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_modules_animaltype_model",
       "community": 1,
-      "norm_label": "animaltype/model.ts"
+      "norm_label": "animaltype/model.ts",
+      "id": "src_modules_animaltype_model",
+      "community_name": "App & Route Wiring"
     },
     {
       "label": "listAnimalTypeQuery",
@@ -419,9 +460,10 @@
       "source_file": "src/modules/animalType/model.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "src_modules_animaltype_model_listanimaltypequery",
       "community": 1,
-      "norm_label": "listanimaltypequery"
+      "norm_label": "listanimaltypequery",
+      "id": "src_modules_animaltype_model_listanimaltypequery",
+      "community_name": "App & Route Wiring"
     },
     {
       "label": "animalType/route.ts",
@@ -429,9 +471,10 @@
       "source_file": "src/modules/animalType/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_modules_animaltype_route",
       "community": 1,
-      "norm_label": "animaltype/route.ts"
+      "norm_label": "animaltype/route.ts",
+      "id": "src_modules_animaltype_route",
+      "community_name": "App & Route Wiring"
     },
     {
       "label": "animalTypeRoute",
@@ -439,9 +482,10 @@
       "source_file": "src/modules/animalType/route.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "src_modules_animaltype_route_animaltyperoute",
       "community": 1,
-      "norm_label": "animaltyperoute"
+      "norm_label": "animaltyperoute",
+      "id": "src_modules_animaltype_route_animaltyperoute",
+      "community_name": "App & Route Wiring"
     },
     {
       "label": "auth/route.ts",
@@ -449,9 +493,10 @@
       "source_file": "src/modules/auth/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_modules_auth_route",
       "community": 4,
-      "norm_label": "auth/route.ts"
+      "norm_label": "auth/route.ts",
+      "id": "src_modules_auth_route",
+      "community_name": "Auth & Core Library"
     },
     {
       "label": "prisma",
@@ -459,9 +504,10 @@
       "source_file": "src/modules/auth/route.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "src_modules_auth_route_prisma",
       "community": 4,
-      "norm_label": "prisma"
+      "norm_label": "prisma",
+      "id": "src_modules_auth_route_prisma",
+      "community_name": "Auth & Core Library"
     },
     {
       "label": "authRoute",
@@ -469,9 +515,10 @@
       "source_file": "src/modules/auth/route.ts",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "src_modules_auth_route_authroute",
       "community": 4,
-      "norm_label": "authroute"
+      "norm_label": "authroute",
+      "id": "src_modules_auth_route_authroute",
+      "community_name": "Auth & Core Library"
     },
     {
       "label": "TODO: Uncomment these lines for production, temporarily disabled for testing",
@@ -479,9 +526,10 @@
       "source_file": "src/modules/auth/route.ts",
       "source_location": "L116",
       "_origin": "ast",
-      "id": "src_modules_auth_route_rationale_116",
       "community": 4,
-      "norm_label": "todo: uncomment these lines for production, temporarily disabled for testing"
+      "norm_label": "todo: uncomment these lines for production, temporarily disabled for testing",
+      "id": "src_modules_auth_route_rationale_116",
+      "community_name": "Auth & Core Library"
     },
     {
       "label": "utils/index.ts",
@@ -489,9 +537,10 @@
       "source_file": "src/modules/common/utils/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_modules_common_utils_index",
       "community": 9,
-      "norm_label": "utils/index.ts"
+      "norm_label": "utils/index.ts",
+      "id": "src_modules_common_utils_index",
+      "community_name": "Common Utilities"
     },
     {
       "label": "isUndefined()",
@@ -499,9 +548,10 @@
       "source_file": "src/modules/common/utils/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_modules_common_utils_index_isundefined",
       "community": 9,
-      "norm_label": "isundefined()"
+      "norm_label": "isundefined()",
+      "id": "src_modules_common_utils_index_isundefined",
+      "community_name": "Common Utilities"
     },
     {
       "label": "elysia.ts",
@@ -509,9 +559,10 @@
       "source_file": "src/modules/core/lib/elysia.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_modules_core_lib_elysia",
       "community": 4,
-      "norm_label": "elysia.ts"
+      "norm_label": "elysia.ts",
+      "id": "src_modules_core_lib_elysia",
+      "community_name": "Auth & Core Library"
     },
     {
       "label": "jwtBodySchema",
@@ -519,9 +570,10 @@
       "source_file": "src/modules/core/lib/elysia.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "src_modules_core_lib_elysia_jwtbodyschema",
       "community": 4,
-      "norm_label": "jwtbodyschema"
+      "norm_label": "jwtbodyschema",
+      "id": "src_modules_core_lib_elysia_jwtbodyschema",
+      "community_name": "Auth & Core Library"
     },
     {
       "label": "elysia",
@@ -529,9 +581,10 @@
       "source_file": "src/modules/core/lib/elysia.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "src_modules_core_lib_elysia_elysia",
       "community": 4,
-      "norm_label": "elysia"
+      "norm_label": "elysia",
+      "id": "src_modules_core_lib_elysia_elysia",
+      "community_name": "Auth & Core Library"
     },
     {
       "label": "pedigree/model.ts",
@@ -539,9 +592,10 @@
       "source_file": "src/modules/pedigree/model.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_modules_pedigree_model",
       "community": 2,
-      "norm_label": "pedigree/model.ts"
+      "norm_label": "pedigree/model.ts",
+      "id": "src_modules_pedigree_model",
+      "community_name": "Pedigree Module"
     },
     {
       "label": "getTreeQuery",
@@ -549,9 +603,10 @@
       "source_file": "src/modules/pedigree/model.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "src_modules_pedigree_model_gettreequery",
       "community": 2,
-      "norm_label": "gettreequery"
+      "norm_label": "gettreequery",
+      "id": "src_modules_pedigree_model_gettreequery",
+      "community_name": "Pedigree Module"
     },
     {
       "label": "pedigree/route.ts",
@@ -559,9 +614,10 @@
       "source_file": "src/modules/pedigree/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_modules_pedigree_route",
       "community": 1,
-      "norm_label": "pedigree/route.ts"
+      "norm_label": "pedigree/route.ts",
+      "id": "src_modules_pedigree_route",
+      "community_name": "App & Route Wiring"
     },
     {
       "label": "prisma",
@@ -569,9 +625,10 @@
       "source_file": "src/modules/pedigree/route.ts",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "src_modules_pedigree_route_prisma",
       "community": 1,
-      "norm_label": "prisma"
+      "norm_label": "prisma",
+      "id": "src_modules_pedigree_route_prisma",
+      "community_name": "App & Route Wiring"
     },
     {
       "label": "pedigreeService",
@@ -579,9 +636,10 @@
       "source_file": "src/modules/pedigree/route.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "src_modules_pedigree_route_pedigreeservice",
       "community": 1,
-      "norm_label": "pedigreeservice"
+      "norm_label": "pedigreeservice",
+      "id": "src_modules_pedigree_route_pedigreeservice",
+      "community_name": "App & Route Wiring"
     },
     {
       "label": "pedigreeRoute",
@@ -589,9 +647,10 @@
       "source_file": "src/modules/pedigree/route.ts",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "src_modules_pedigree_route_pedigreeroute",
       "community": 1,
-      "norm_label": "pedigreeroute"
+      "norm_label": "pedigreeroute",
+      "id": "src_modules_pedigree_route_pedigreeroute",
+      "community_name": "App & Route Wiring"
     },
     {
       "label": "pedigree/service.ts",
@@ -599,9 +658,10 @@
       "source_file": "src/modules/pedigree/service.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_modules_pedigree_service",
       "community": 2,
-      "norm_label": "pedigree/service.ts"
+      "norm_label": "pedigree/service.ts",
+      "id": "src_modules_pedigree_service",
+      "community_name": "Pedigree Module"
     },
     {
       "label": "TreeNode",
@@ -609,9 +669,10 @@
       "source_file": "src/modules/pedigree/service.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "src_modules_pedigree_service_treenode",
       "community": 2,
-      "norm_label": "treenode"
+      "norm_label": "treenode",
+      "id": "src_modules_pedigree_service_treenode",
+      "community_name": "Pedigree Module"
     },
     {
       "label": "getPedigreeTree()",
@@ -619,9 +680,10 @@
       "source_file": "src/modules/pedigree/service.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "src_modules_pedigree_service_getpedigreetree",
       "community": 2,
-      "norm_label": "getpedigreetree()"
+      "norm_label": "getpedigreetree()",
+      "id": "src_modules_pedigree_service_getpedigreetree",
+      "community_name": "Pedigree Module"
     },
     {
       "label": "PedigreeService",
@@ -629,9 +691,10 @@
       "source_file": "src/modules/pedigree/service.ts",
       "source_location": "L86",
       "_origin": "ast",
-      "id": "src_modules_pedigree_service_pedigreeservice",
       "community": 2,
-      "norm_label": "pedigreeservice"
+      "norm_label": "pedigreeservice",
+      "id": "src_modules_pedigree_service_pedigreeservice",
+      "community_name": "Pedigree Module"
     },
     {
       "label": ".constructor()",
@@ -639,9 +702,10 @@
       "source_file": "src/modules/pedigree/service.ts",
       "source_location": "L89",
       "_origin": "ast",
-      "id": "src_modules_pedigree_service_pedigreeservice_constructor",
       "community": 2,
-      "norm_label": ".constructor()"
+      "norm_label": ".constructor()",
+      "id": "src_modules_pedigree_service_pedigreeservice_constructor",
+      "community_name": "Pedigree Module"
     },
     {
       "label": ".getTree()",
@@ -649,476 +713,53 @@
       "source_file": "src/modules/pedigree/service.ts",
       "source_location": "L93",
       "_origin": "ast",
-      "id": "src_modules_pedigree_service_pedigreeservice_gettree",
       "community": 2,
-      "norm_label": ".gettree()"
+      "norm_label": ".gettree()",
+      "id": "src_modules_pedigree_service_pedigreeservice_gettree",
+      "community_name": "Pedigree Module"
     }
   ],
   "links": [
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_achievement_service"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
+      "source_file": "src/modules/achievement/service.ts",
       "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_app_app",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_modules_achievement_route",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_modules_achievement_route_achievementroute",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_modules_animal_route",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_modules_animal_route_animalroute",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_modules_animaltype_route",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_modules_animaltype_route_animaltyperoute",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_modules_auth_route",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_modules_auth_route_authroute",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_modules_pedigree_route",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app.ts",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_modules_pedigree_route_pedigreeroute",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "src/index.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_index",
-      "target": "src_app",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/index.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_index",
-      "target": "src_app_app",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/model.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_model",
-      "target": "src_modules_achievement_model_createachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/model.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_model",
-      "target": "src_modules_achievement_model_deleteachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/model.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_model",
-      "target": "src_modules_achievement_model_listachievementquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/model.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_model",
-      "target": "src_modules_achievement_model_updateachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_achievement_model",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_service",
-      "target": "src_modules_achievement_model",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_achievement_model_listachievementquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_service",
-      "target": "src_modules_achievement_model_listachievementquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L90",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_service_achievementservice_getachievementlist",
-      "target": "src_modules_achievement_model_listachievementquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_achievement_model_updateachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_service",
-      "target": "src_modules_achievement_model_updateachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L16",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_service_achievementservice_updateachievement",
-      "target": "src_modules_achievement_model_updateachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_achievement_model_createachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_service",
-      "target": "src_modules_achievement_model_createachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L42",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_service_achievementservice_createachievement",
-      "target": "src_modules_achievement_model_createachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_achievement_model_deleteachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_service",
-      "target": "src_modules_achievement_model_deleteachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L72",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_service_achievementservice_deleteachievement",
-      "target": "src_modules_achievement_model_deleteachievementbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L14",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_achievement_route_achievementroute",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_achievement_route_achievementservice",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L11",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_achievement_route_prisma",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_achievement_service",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_achievement_service_achievementservice",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_core_lib_elysia",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/route.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_achievement_route",
-      "target": "src_modules_core_lib_elysia_elysia",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_achievement_service",
       "target": "src_modules_achievement_service_achievementservice",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_achievement_service_achievementservice"
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L12",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_achievement_service_achievementservice",
@@ -1129,7 +770,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L42",
+      "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_achievement_service_achievementservice",
@@ -1140,7 +781,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L72",
+      "source_location": "L85",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_achievement_service_achievementservice",
@@ -1151,7 +792,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L90",
+      "source_location": "L103",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_achievement_service_achievementservice",
@@ -1162,7 +803,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/achievement/service.ts",
-      "source_location": "L16",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_achievement_service_achievementservice",
@@ -1170,216 +811,16 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/model.ts",
-      "source_location": "L31",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_model",
-      "target": "src_modules_animal_model_createanimalbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/model.ts",
-      "source_location": "L40",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_model",
-      "target": "src_modules_animal_model_deleteanimalbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/model.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_model",
-      "target": "src_modules_animal_model_listanimalquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/model.ts",
-      "source_location": "L18",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_model",
-      "target": "src_modules_animal_model_updateanimalbody",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/route.ts",
-      "source_location": "L1",
+      "source_file": "src/app.ts",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_modules_animal_route",
-      "target": "src_modules_animal_model",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/service.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_service",
-      "target": "src_modules_animal_model",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/route.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_route",
-      "target": "src_modules_animal_model_listanimalquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/service.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_service",
-      "target": "src_modules_animal_model_listanimalquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/service.ts",
-      "source_location": "L22",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_service_animalservice_getanimallist",
-      "target": "src_modules_animal_model_listanimalquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/route.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_route",
-      "target": "src_modules_animal_model_updateanimalbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/service.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_service",
-      "target": "src_modules_animal_model_updateanimalbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/service.ts",
-      "source_location": "L93",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_service_animalservice_updateanimal",
-      "target": "src_modules_animal_model_updateanimalbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/route.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_route",
-      "target": "src_modules_animal_model_createanimalbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/service.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_service",
-      "target": "src_modules_animal_model_createanimalbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/service.ts",
-      "source_location": "L128",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_service_animalservice_createanimal",
-      "target": "src_modules_animal_model_createanimalbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/route.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_route",
-      "target": "src_modules_animal_model_deleteanimalbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/service.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_service",
-      "target": "src_modules_animal_model_deleteanimalbody",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/service.ts",
-      "source_location": "L152",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_service_animalservice_deleteanimal",
-      "target": "src_modules_animal_model_deleteanimalbody",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_modules_animal_route"
     },
     {
       "relation": "contains",
@@ -1439,34 +880,22 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/route.ts",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_modules_animal_route",
-      "target": "src_modules_core_lib_elysia",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/animal/route.ts",
-      "source_location": "L8",
+      "source_file": "src/app.ts",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_modules_animal_route",
-      "target": "src_modules_core_lib_elysia_elysia",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_modules_animal_route_animalroute"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L15",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service",
@@ -1477,7 +906,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L9",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service",
@@ -1488,7 +917,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L18",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service_animalservice",
@@ -1499,7 +928,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L128",
+      "source_location": "L133",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service_animalservice",
@@ -1510,7 +939,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L152",
+      "source_location": "L157",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service_animalservice",
@@ -1521,7 +950,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L22",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service_animalservice",
@@ -1532,7 +961,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L214",
+      "source_location": "L221",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service_animalservice",
@@ -1543,7 +972,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L195",
+      "source_location": "L202",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service_animalservice",
@@ -1554,7 +983,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L168",
+      "source_location": "L175",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service_animalservice",
@@ -1565,7 +994,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L232",
+      "source_location": "L239",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service_animalservice",
@@ -1576,7 +1005,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/animal/service.ts",
-      "source_location": "L93",
+      "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_animal_service_animalservice",
@@ -1586,13 +1015,349 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/app.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_app_app"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_modules_achievement_route"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_modules_achievement_route_achievementroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_modules_animaltype_route"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_modules_animaltype_route_animaltyperoute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_modules_auth_route"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_modules_auth_route_authroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_modules_pedigree_route"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_modules_pedigree_route_pedigreeroute"
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "src_app"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_index",
+      "target": "src_app_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/model.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_model",
+      "target": "src_modules_achievement_model_createachievementbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/model.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_model",
+      "target": "src_modules_achievement_model_deleteachievementbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/model.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_model",
+      "target": "src_modules_achievement_model_listachievementquery"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/model.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_model",
+      "target": "src_modules_achievement_model_updateachievementbody"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_achievement_model"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_achievement_model_listachievementquery"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_achievement_model_updateachievementbody"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_achievement_model_createachievementbody"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_achievement_model_deleteachievementbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_achievement_route_achievementroute"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_achievement_route_achievementservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_achievement_route_prisma"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_core_lib_elysia"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/achievement/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_achievement_route",
+      "target": "src_modules_core_lib_elysia_elysia"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/animal/model.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_animal_model",
+      "target": "src_modules_animal_model_createanimalbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/animal/model.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_animal_model",
+      "target": "src_modules_animal_model_deleteanimalbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/animal/model.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_animal_model",
+      "target": "src_modules_animal_model_listanimalquery"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/animal/model.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_modules_animal_model",
+      "target": "src_modules_animal_model_updateanimalbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/modules/animalType/model.ts",
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_animaltype_model",
-      "target": "src_modules_animaltype_model_listanimaltypequery",
-      "confidence_score": 1.0
+      "target": "src_modules_animaltype_model_listanimaltypequery"
     },
     {
       "relation": "imports_from",
@@ -1602,9 +1367,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_animaltype_route",
-      "target": "src_modules_animaltype_model",
-      "confidence_score": 1.0
+      "target": "src_modules_animaltype_model"
     },
     {
       "relation": "imports",
@@ -1614,9 +1379,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_animaltype_route",
-      "target": "src_modules_animaltype_model_listanimaltypequery",
-      "confidence_score": 1.0
+      "target": "src_modules_animaltype_model_listanimaltypequery"
     },
     {
       "relation": "contains",
@@ -1625,9 +1390,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_animaltype_route",
-      "target": "src_modules_animaltype_route_animaltyperoute",
-      "confidence_score": 1.0
+      "target": "src_modules_animaltype_route_animaltyperoute"
     },
     {
       "relation": "contains",
@@ -1636,9 +1401,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_auth_route",
-      "target": "src_modules_auth_route_authroute",
-      "confidence_score": 1.0
+      "target": "src_modules_auth_route_authroute"
     },
     {
       "relation": "contains",
@@ -1647,9 +1412,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_auth_route",
-      "target": "src_modules_auth_route_prisma",
-      "confidence_score": 1.0
+      "target": "src_modules_auth_route_prisma"
     },
     {
       "relation": "imports_from",
@@ -1659,9 +1424,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_auth_route",
-      "target": "src_modules_core_lib_elysia",
-      "confidence_score": 1.0
+      "target": "src_modules_core_lib_elysia"
     },
     {
       "relation": "imports",
@@ -1671,9 +1436,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_auth_route",
-      "target": "src_modules_core_lib_elysia_elysia",
-      "confidence_score": 1.0
+      "target": "src_modules_core_lib_elysia_elysia"
     },
     {
       "relation": "rationale_for",
@@ -1682,9 +1447,9 @@
       "source_location": "L116",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_auth_route_rationale_116",
-      "target": "src_modules_auth_route",
-      "confidence_score": 1.0
+      "target": "src_modules_auth_route"
     },
     {
       "relation": "contains",
@@ -1693,9 +1458,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_common_utils_index",
-      "target": "src_modules_common_utils_index_isundefined",
-      "confidence_score": 1.0
+      "target": "src_modules_common_utils_index_isundefined"
     },
     {
       "relation": "contains",
@@ -1704,9 +1469,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_core_lib_elysia",
-      "target": "src_modules_core_lib_elysia_elysia",
-      "confidence_score": 1.0
+      "target": "src_modules_core_lib_elysia_elysia"
     },
     {
       "relation": "contains",
@@ -1715,9 +1480,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_core_lib_elysia",
-      "target": "src_modules_core_lib_elysia_jwtbodyschema",
-      "confidence_score": 1.0
+      "target": "src_modules_core_lib_elysia_jwtbodyschema"
     },
     {
       "relation": "imports_from",
@@ -1727,9 +1492,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_route",
-      "target": "src_modules_core_lib_elysia",
-      "confidence_score": 1.0
+      "target": "src_modules_core_lib_elysia"
     },
     {
       "relation": "imports",
@@ -1739,9 +1504,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_route",
-      "target": "src_modules_core_lib_elysia_elysia",
-      "confidence_score": 1.0
+      "target": "src_modules_core_lib_elysia_elysia"
     },
     {
       "relation": "contains",
@@ -1750,9 +1515,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_model",
-      "target": "src_modules_pedigree_model_gettreequery",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_model_gettreequery"
     },
     {
       "relation": "imports_from",
@@ -1762,9 +1527,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_route",
-      "target": "src_modules_pedigree_model",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_model"
     },
     {
       "relation": "imports_from",
@@ -1774,9 +1539,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_service",
-      "target": "src_modules_pedigree_model",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_model"
     },
     {
       "relation": "imports",
@@ -1786,9 +1551,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_route",
-      "target": "src_modules_pedigree_model_gettreequery",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_model_gettreequery"
     },
     {
       "relation": "imports",
@@ -1798,9 +1563,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_service",
-      "target": "src_modules_pedigree_model_gettreequery",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_model_gettreequery"
     },
     {
       "relation": "contains",
@@ -1809,9 +1574,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_route",
-      "target": "src_modules_pedigree_route_pedigreeroute",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_route_pedigreeroute"
     },
     {
       "relation": "contains",
@@ -1820,9 +1585,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_route",
-      "target": "src_modules_pedigree_route_pedigreeservice",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_route_pedigreeservice"
     },
     {
       "relation": "contains",
@@ -1831,9 +1596,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_route",
-      "target": "src_modules_pedigree_route_prisma",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_route_prisma"
     },
     {
       "relation": "imports_from",
@@ -1843,9 +1608,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_route",
-      "target": "src_modules_pedigree_service",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_service"
     },
     {
       "relation": "imports",
@@ -1855,9 +1620,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_route",
-      "target": "src_modules_pedigree_service_pedigreeservice",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_service_pedigreeservice"
     },
     {
       "relation": "contains",
@@ -1866,9 +1631,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_service",
-      "target": "src_modules_pedigree_service_getpedigreetree",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_service_getpedigreetree"
     },
     {
       "relation": "contains",
@@ -1877,9 +1642,9 @@
       "source_location": "L86",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_service",
-      "target": "src_modules_pedigree_service_pedigreeservice",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_service_pedigreeservice"
     },
     {
       "relation": "contains",
@@ -1888,9 +1653,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_service",
-      "target": "src_modules_pedigree_service_treenode",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_service_treenode"
     },
     {
       "relation": "calls",
@@ -1900,9 +1665,9 @@
       "source_location": "L101",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_service_pedigreeservice_gettree",
-      "target": "src_modules_pedigree_service_getpedigreetree",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_service_getpedigreetree"
     },
     {
       "relation": "method",
@@ -1911,9 +1676,9 @@
       "source_location": "L89",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_service_pedigreeservice",
-      "target": "src_modules_pedigree_service_pedigreeservice_constructor",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_service_pedigreeservice_constructor"
     },
     {
       "relation": "method",
@@ -1922,11 +1687,11 @@
       "source_location": "L93",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_modules_pedigree_service_pedigreeservice",
-      "target": "src_modules_pedigree_service_pedigreeservice_gettree",
-      "confidence_score": 1.0
+      "target": "src_modules_pedigree_service_pedigreeservice_gettree"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "881672c8a9c15fe74effd093ad807ed024b97bb6"
+  "built_at_commit": "0267c2c9dff19a6ee58b3489d38b2afab9605f1a"
 }

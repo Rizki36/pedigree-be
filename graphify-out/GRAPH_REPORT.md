@@ -1,12 +1,18 @@
-# Graph Report - .  (2026-08-02)
+# Graph Report - pedigree-be  (2026-08-02)
 
 ## Corpus Check
-- Corpus is ~3,135 words - fits in a single context window. You may not need a graph.
+- 16 files · ~3,115 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 65 nodes · 110 edges · 10 communities (6 shown, 4 thin omitted)
+- 65 nodes · 85 edges · 8 communities (7 shown, 1 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `0267c2c9`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Achievement Module
@@ -16,20 +22,18 @@
 - Auth & Core Library
 - Animal Status Methods
 - Animal Routes
-- Animal List Query
-- Animal Update Operation
 
 ## God Nodes (most connected - your core abstractions)
 1. `AnimalService` - 11 edges
 2. `AchievementService` - 7 edges
-3. `elysia` - 5 edges
-4. `listAchievementQuery` - 4 edges
-5. `updateAchievementBody` - 4 edges
-6. `createAchievementBody` - 4 edges
-7. `deleteAchievementBody` - 4 edges
-8. `listAnimalQuery` - 4 edges
-9. `updateAnimalBody` - 4 edges
-10. `createAnimalBody` - 4 edges
+3. `elysia` - 4 edges
+4. `PedigreeService` - 4 edges
+5. `getTreeQuery` - 3 edges
+6. `animalRoute` - 2 edges
+7. `app` - 2 edges
+8. `listAchievementQuery` - 2 edges
+9. `updateAchievementBody` - 2 edges
+10. `createAchievementBody` - 2 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -37,39 +41,45 @@
 ## Import Cycles
 - None detected.
 
-## Communities (10 total, 4 thin omitted)
+## Communities (8 total, 1 thin omitted)
 
 ### Community 0 - "Achievement Module"
-Cohesion: 0.27
-Nodes (7): createAchievementBody, deleteAchievementBody, listAchievementQuery, updateAchievementBody, achievementService, prisma, AchievementService
+Cohesion: 0.39
+Nodes (6): createAchievementBody, deleteAchievementBody, listAchievementQuery, updateAchievementBody, achievementService, prisma
 
 ### Community 1 - "App & Route Wiring"
-Cohesion: 0.21
-Nodes (8): app, achievementRoute, animalRoute, listAnimalTypeQuery, animalTypeRoute, pedigreeRoute, pedigreeService, prisma
+Cohesion: 0.23
+Nodes (7): app, achievementRoute, listAnimalTypeQuery, animalTypeRoute, pedigreeRoute, pedigreeService, prisma
 
 ### Community 2 - "Pedigree Module"
 Cohesion: 0.32
 Nodes (4): getTreeQuery, getPedigreeTree(), PedigreeService, TreeNode
 
 ### Community 3 - "Animal Create/Delete"
-Cohesion: 0.38
-Nodes (3): createAnimalBody, deleteAnimalBody, StatusDistributionItem
+Cohesion: 0.40
+Nodes (4): createAnimalBody, deleteAnimalBody, listAnimalQuery, updateAnimalBody
 
 ### Community 4 - "Auth & Core Library"
 Cohesion: 0.33
 Nodes (5): authRoute, prisma, TODO: Uncomment these lines for production, temporarily disabled for testing, elysia, jwtBodySchema
 
+### Community 5 - "Animal Status Methods"
+Cohesion: 0.13
+Nodes (5): animalRoute, animalService, prisma, AnimalService, StatusDistributionItem
+
 ## Knowledge Gaps
-- **10 isolated node(s):** `prisma`, `achievementService`, `prisma`, `animalService`, `StatusDistributionItem` (+5 more)
+- **14 isolated node(s):** `prisma`, `animalService`, `StatusDistributionItem`, `prisma`, `achievementService` (+9 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `AnimalService` connect `Animal Status Methods` to `Animal Update Operation`, `Animal Create/Delete`, `Animal Routes`, `Animal List Query`?**
-  _High betweenness centrality (0.200) - this node is a cross-community bridge._
-- **Why does `elysia` connect `Auth & Core Library` to `Achievement Module`, `App & Route Wiring`, `Animal Routes`?**
-  _High betweenness centrality (0.136) - this node is a cross-community bridge._
-- **What connects `prisma`, `achievementService`, `prisma` to the rest of the system?**
-  _10 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `AchievementService` connect `Animal Routes` to `Achievement Module`?**
+  _High betweenness centrality (0.134) - this node is a cross-community bridge._
+- **Why does `PedigreeService` connect `Pedigree Module` to `App & Route Wiring`?**
+  _High betweenness centrality (0.054) - this node is a cross-community bridge._
+- **What connects `prisma`, `animalService`, `StatusDistributionItem` to the rest of the system?**
+  _14 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Animal Status Methods` be split into smaller, more focused modules?**
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
