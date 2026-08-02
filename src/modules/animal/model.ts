@@ -1,5 +1,5 @@
 import { t } from "elysia";
-import { AnimalType, Gender } from "../../../prisma/generated/client";
+import { AnimalType, Gender } from "../../../prisma/generated/client/index.js";
 
 export const listAnimalQuery = t.Object({
 	limit: t.Optional(t.Numeric()),

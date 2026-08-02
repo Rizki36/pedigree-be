@@ -1,8 +1,8 @@
-import type { Animal } from "../../../prisma/generated/client";
-import { PrismaClient } from "../../../prisma/generated/client";
-import { elysia } from "../core/lib/elysia";
-import { getTreeQuery } from "./model";
-import { PedigreeService } from "./service";
+import type { Animal } from "../../../prisma/generated/client/index.js";
+import { PrismaClient } from "../../../prisma/generated/client/index.js";
+import { elysia } from "../core/lib/elysia.js";
+import { getTreeQuery } from "./model.js";
+import { PedigreeService } from "./service.js";
 
 const prisma = new PrismaClient();
 const pedigreeService = new PedigreeService(prisma);

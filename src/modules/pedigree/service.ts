@@ -1,5 +1,5 @@
-import type { Animal, PrismaClient } from "../../../prisma/generated/client";
-import type { getTreeQuery } from "./model";
+import type { Animal, PrismaClient } from "../../../prisma/generated/client/index.js";
+import type { getTreeQuery } from "./model.js";
 
 type TreeNode = Animal & {
 	hasNextNodes: boolean;

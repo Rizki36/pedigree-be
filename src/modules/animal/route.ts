@@ -3,10 +3,10 @@ import {
 	deleteAnimalBody,
 	listAnimalQuery,
 	updateAnimalBody,
-} from "./model";
-import { PrismaClient } from "../../../prisma/generated/client";
-import { elysia } from "../core/lib/elysia";
-import { AnimalService } from "./service";
+} from "./model.js";
+import { PrismaClient } from "../../../prisma/generated/client/index.js";
+import { elysia } from "../core/lib/elysia.js";
+import { AnimalService } from "./service.js";
 
 const prisma = new PrismaClient();
 const animalService = new AnimalService(prisma);

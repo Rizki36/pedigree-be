@@ -1,12 +1,12 @@
-import { PrismaClient } from "../../../prisma/generated/client";
-import { elysia } from "../core/lib/elysia";
+import { PrismaClient } from "../../../prisma/generated/client/index.js";
+import { elysia } from "../core/lib/elysia.js";
 import {
 	createAchievementBody,
 	deleteAchievementBody,
 	listAchievementQuery,
 	updateAchievementBody,
-} from "./model";
-import { AchievementService } from "./service";
+} from "./model.js";
+import { AchievementService } from "./service.js";
 
 const prisma = new PrismaClient();
 const achievementService = new AchievementService(prisma);

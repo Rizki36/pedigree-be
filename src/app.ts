@@ -1,11 +1,11 @@
 import swagger from "@elysiajs/swagger";
 import Elysia, { t } from "elysia";
-import { animalRoute } from "./modules/animal/route";
+import { animalRoute } from "./modules/animal/route.js";
 import cors from "@elysiajs/cors";
-import { animalTypeRoute } from "./modules/animalType/route";
-import { authRoute } from "./modules/auth/route";
-import { achievementRoute } from "./modules/achievement/route";
-import { pedigreeRoute } from "./modules/pedigree/route";
+import { animalTypeRoute } from "./modules/animalType/route.js";
+import { authRoute } from "./modules/auth/route.js";
+import { achievementRoute } from "./modules/achievement/route.js";
+import { pedigreeRoute } from "./modules/pedigree/route.js";
 import { rateLimit } from "elysia-rate-limit";
 import logixlysia from "logixlysia";
 

@@ -1,10 +1,10 @@
-import type { Prisma, PrismaClient } from "../../../prisma/generated/client";
+import type { Prisma, PrismaClient } from "../../../prisma/generated/client/index.js";
 import type {
 	createAnimalBody,
 	deleteAnimalBody,
 	listAnimalQuery,
 	updateAnimalBody,
-} from "./model";
+} from "./model.js";
 
 type StatusDistributionItem = {
 	gender: "MALE" | "FEMALE" | null;

@@ -1,6 +1,6 @@
 import { t } from "elysia";
-import { PrismaClient } from "../../../prisma/generated/client";
-import { elysia } from "../core/lib/elysia";
+import { PrismaClient } from "../../../prisma/generated/client/index.js";
+import { elysia } from "../core/lib/elysia.js";
 
 const prisma = new PrismaClient();
 

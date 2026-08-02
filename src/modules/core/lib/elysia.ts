@@ -1,4 +1,4 @@
-import cookie from "@elysiajs/cookie";
+import { cookie } from "@elysiajs/cookie";
 import jwt from "@elysiajs/jwt";
 import Elysia, { t } from "elysia";
 import { oauth2 } from "elysia-oauth2";

@@ -1,6 +1,6 @@
 import Elysia from "elysia";
-import { AnimalType } from "../../../prisma/generated/client";
-import { listAnimalTypeQuery } from "./model";
+import { AnimalType } from "../../../prisma/generated/client/index.js";
+import { listAnimalTypeQuery } from "./model.js";
 
 export const animalTypeRoute = new Elysia({ prefix: "/animal-type" }).get(
 	"/list",

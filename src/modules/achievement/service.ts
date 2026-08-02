@@ -1,10 +1,10 @@
-import type { Prisma, PrismaClient } from "../../../prisma/generated/client";
+import type { Prisma, PrismaClient } from "../../../prisma/generated/client/index.js";
 import type {
 	createAchievementBody,
 	deleteAchievementBody,
 	listAchievementQuery,
 	updateAchievementBody,
-} from "./model";
+} from "./model.js";
 
 export class AchievementService {
 	prisma: PrismaClient;
