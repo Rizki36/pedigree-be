@@ -25,7 +25,9 @@ const app = new Elysia()
 					translateTime: "yyyy-mm-dd HH:MM:ss",
 				},
 				ip: true,
-				logFilePath: `./logs/${new Date().toISOString().split("T")[0]}.log`, // per day
+				logFilePath: process.env.VERCEL
+					? undefined
+					: `./logs/${new Date().toISOString().split("T")[0]}.log`, // per day
 				customLogFormat:
 					"🦊 {now} {level} {duration} {method} {pathname} {status} {message} {ip} {epoch}",
 				logFilter: {
@@ -66,7 +68,6 @@ const app = new Elysia()
 			.use(animalTypeRoute)
 			.use(achievementRoute)
 			.use(pedigreeRoute);
-	})
-	.listen(3011);
+	});
 
 export default app;
