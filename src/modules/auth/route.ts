@@ -46,15 +46,16 @@ export const authRoute = elysia.group("/auth", (app) => {
 					isSignIn: false,
 				},
 			)
-			.get("/google", async ({ oauth2, redirect }) => {
+			.get("/google", async ({ oauth2, set }) => {
 				const url = oauth2.createURL("Google", ["email", "profile"]);
 				url.searchParams.set("access_type", "offline");
 
-				return redirect(url.href);
+				set.status = 302;
+				set.headers.Location = url.href;
 			})
 			.get(
 				"/google/callback",
-				async ({ oauth2, jwt, cookie, set, redirect }) => {
+				async ({ oauth2, jwt, cookie, set }) => {
 					try {
 						// Get token from Google
 						const tokens = await oauth2.authorize("Google");
@@ -117,9 +118,9 @@ export const authRoute = elysia.group("/auth", (app) => {
 						// cookie.authToken.secure = process.env.NODE_ENV === "production";
 						cookie.authToken.maxAge = 60 * 60 * 24 * 7; // 7 days
 
-						return redirect(
-							process.env.FRONTEND_URL || "http://localhost:3010",
-						);
+						set.status = 302;
+						set.headers.Location =
+							process.env.FRONTEND_URL || "http://localhost:3010";
 					} catch (error) {
 						console.error("Google auth error:", error);
 						set.status = 500;
