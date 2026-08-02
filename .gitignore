@@ -49,3 +49,5 @@ prisma/generated
 
 logs
 .env*
+
+graphify-out/cost.json
