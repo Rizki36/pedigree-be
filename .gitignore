@@ -51,3 +51,5 @@ logs
 .env*
 
 graphify-out/cost.json
+
+tsconfig.tsbuildinfo
