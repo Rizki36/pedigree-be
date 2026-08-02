@@ -48,3 +48,4 @@ dist
 prisma/generated
 
 logs
+.env*
